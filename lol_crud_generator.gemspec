@@ -7,16 +7,15 @@ require "lol_crud_generator/version"
 Gem::Specification.new do |s|
   s.name        = "lol_crud_generator"
   s.version     = LolCrudGenerator::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of LolCrudGenerator."
-  s.description = "TODO: Description of LolCrudGenerator."
+  s.authors     = ["Eduardo Zaghi"]
+  s.email       = ["eduardo@loldesign.com.br"]
+  s.homepage    = "loldesign.com.br"
+  s.summary     = "Create a crud"
+  s.description = "Create crud index/show/new/edit/create/update/destoy"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
 
   s.add_dependency "rails", "~> 3.2.13"
-  # s.add_dependency "jquery-rails"
 
   s.add_development_dependency "sqlite3"
 end
