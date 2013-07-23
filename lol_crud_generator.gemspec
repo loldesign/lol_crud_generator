@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = LolCrudGenerator::VERSION
   s.authors     = ["Eduardo Zaghi"]
   s.email       = ["eduardo@loldesign.com.br"]
-  s.homepage    = "loldesign.com.br"
+  s.homepage    = "http://wwww.loldesign.com.br"
   s.summary     = "Create a crud"
   s.description = "Create crud index/show/new/edit/create/update/destoy"
 
