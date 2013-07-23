@@ -1,0 +1,28 @@
+<%%= link_to "Adicionar #{<%= @settings[:model] %>}", new_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path() %>
+
+<table>
+  <thead>
+  <% @settings[:model_fields].each do |field| %>
+    <th><%=field%></th>
+  <% end -%>
+
+    <th>&nbsp;</th>
+
+    <th>&nbsp;</th>
+
+  </thead>
+  <tbody>
+    <%% @<%=@settings[:plural]%>.each do |<%= @settings[:assigns] %>| %>
+      <tr>
+      <% @settings[:model_fields].each do |field| %>
+        <td><%%= <%= @settings[:assigns]%>.<%=field%> %></td>
+      <% end -%>
+
+        <td><%%= link_to "Editar", edit_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>) %></td>
+
+        <td><%%= link_to "Remover", <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>), method: :delete, confirm: 'Tem certeza que deseja Remover?' %></td>
+
+      </tr>
+    <%%- end %>
+  </tbody>
+</table>

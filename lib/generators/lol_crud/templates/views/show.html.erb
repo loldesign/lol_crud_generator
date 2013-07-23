@@ -1,0 +1,11 @@
+<h2><%= @settings[:model] %></h2>
+<% @settings[:model_fields].each do |field| %>
+<p>
+  <strong><%= field %>:</strong>
+  <%%= @<%= @settings[:assigns] %>.<%= field %>%>
+</p>
+<% end -%>
+
+<p>
+  <%%= link_to "Voltar", <%= @settings[:path_prefix] %><%= @settings[:assigns_plural] %>_path %>
+</p>

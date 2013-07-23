@@ -1,0 +1,13 @@
+<h2><%%= @<%=@settings[:assigns]%>.new_record? ? 'Novo' : 'Edição'%></h2>
+
+<%%= simple_form_for(<%= @settings[:form_url] %>) do |f|%>
+  <% @settings[:model_fields].each do |field| %>
+  <%%= f.input :<%= field %>%>
+  <% end -%>
+
+  <%%= f.button :submit %>
+<%% end %>
+
+<p>
+  <%%= link_to "Voltar", <%= @settings[:path_prefix] %><%= @settings[:assigns_plural] %>_path %>
+</p>
