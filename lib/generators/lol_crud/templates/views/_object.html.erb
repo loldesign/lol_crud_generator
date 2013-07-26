@@ -1,0 +1,10 @@
+<tr>
+  <% @settings[:model_fields].each do |field| %>
+    <td><%%= <%= @settings[:assigns]%>.<%=field%> %></td>
+  <% end -%>
+
+    <td><%%= link_to "Editar", edit_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>) %></td>
+
+    <td><%%= link_to "Remover", <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>), method: :delete, confirm: 'Tem certeza que deseja Remover?' %></td>
+
+</tr>

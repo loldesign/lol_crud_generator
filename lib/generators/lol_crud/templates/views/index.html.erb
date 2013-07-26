@@ -12,17 +12,6 @@
 
   </thead>
   <tbody>
-    <%% @<%=@settings[:plural]%>.each do |<%= @settings[:assigns] %>| %>
-      <tr>
-      <% @settings[:model_fields].each do |field| %>
-        <td><%%= <%= @settings[:assigns]%>.<%=field%> %></td>
-      <% end -%>
-
-        <td><%%= link_to "Editar", edit_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>) %></td>
-
-        <td><%%= link_to "Remover", <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(<%= @settings[:assigns] %>), method: :delete, confirm: 'Tem certeza que deseja Remover?' %></td>
-
-      </tr>
-    <%%- end %>
+    <%%= render(partial: '<%= @settings[:assigns] %>', collection: @<%= @settings[:plural] %>) || render(partial: 'no_data', locals: {colspan_number: <%= @settings[:model_fields].size + 2%>})%>
   </tbody>
 </table>

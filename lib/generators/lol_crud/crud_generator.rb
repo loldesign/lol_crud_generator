@@ -25,11 +25,13 @@ module LolCrud
     def create_views
       @settings = resource_options
 
-      template  "views/index.html.erb", "app/views/#{file_path()}/index.html.erb"
-      template  "views/_form.html.erb", "app/views/#{file_path()}/_form.html.erb"
-      template  "views/show.html.erb" , "app/views/#{file_path()}/show.html.erb"
-      copy_file "views/new.html.erb"  , "app/views/#{file_path()}/new.html.erb"
-      copy_file "views/edit.html.erb" , "app/views/#{file_path()}/edit.html.erb"
+      template  "views/index.html.erb",    "app/views/#{file_path()}/index.html.erb"
+      template  "views/_form.html.erb",    "app/views/#{file_path()}/_form.html.erb"
+      template  "views/show.html.erb",     "app/views/#{file_path()}/show.html.erb"
+      template  "views/_object.html.erb",  "app/views/#{file_path()}/_#{@settings[:assigns]}.html.erb"
+      copy_file "views/new.html.erb",      "app/views/#{file_path()}/new.html.erb"
+      copy_file "views/edit.html.erb",     "app/views/#{file_path()}/edit.html.erb"
+      copy_file "views/_no_data.html.erb", "app/views/#{file_path()}/_no_data.html.erb"
     end
 
     private
