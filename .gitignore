@@ -65,3 +65,7 @@ log/development.log
 /spec/dummy/tmp/*
 
 *.sqlite3
+
+spec/dummy/log/development.log
+
+spec/dummy/log/development.log
