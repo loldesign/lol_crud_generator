@@ -1,4 +1,4 @@
-<%%= link_to "Adicionar #{<%= @settings[:model] %>}", new_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path() %>
+<%%= link_to "Adicionar #{<%= @settings[:model] %>.model_name.human}", new_<%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path() %>
 
 <table>
   <thead>
