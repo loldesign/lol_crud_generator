@@ -11,7 +11,7 @@ class <%=@settings[:controller]%>Controller < ApplicationController
 
   def create
     if @<%= @settings[:assigns] %>.save
-      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: '<%= @settings[:model] %> criado com sucesso.'
+      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: "#{<%= @settings[:model] %>.model_name.human} criado com sucesso"
     else
       render action: :new
     end
@@ -22,7 +22,7 @@ class <%=@settings[:controller]%>Controller < ApplicationController
 
   def update
     if @<%= @settings[:assigns] %>.update_attributes(params[:<%= @settings[:assigns] %>])
-      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: '<%= @settings[:model] %> editado com sucesso.'
+      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: "#{<%= @settings[:model] %>.model_name.human} editado com sucesso."
     else
       render action: :edit
     end
@@ -33,7 +33,7 @@ class <%=@settings[:controller]%>Controller < ApplicationController
 
   def destroy
     @<%= @settings[:assigns] %>.destroy
-    redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns_plural] %>_path, notice: '<%= @settings[:model] %> removido com sucesso.'
+    redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns_plural] %>_path, notice: "#{<%= @settings[:model] %>.model_name.human} removido com sucesso."
   end
 
   private

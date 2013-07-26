@@ -3,7 +3,7 @@
 <table>
   <thead>
   <% @settings[:model_fields].each do |field| %>
-    <th><%=field%></th>
+    <th><%%= <%= @settings[:model] %>.human_attribute_name(<%= field %>)%></th>
   <% end -%>
 
     <th>&nbsp;</th>
