@@ -1,7 +1,7 @@
 <h2><%= @settings[:model] %></h2>
 <% @settings[:model_fields].each do |field| %>
 <p>
-  <strong><%%= <%=@settings[:model]%>.human_attribute_name(:<%=field%>)%> %></strong>
+  <strong><%%= <%=@settings[:model]%>.human_attribute_name(:<%=field%>)%></strong>
   <%%= @<%= @settings[:assigns] %>.<%= field %>%>
 </p>
 <% end -%>
