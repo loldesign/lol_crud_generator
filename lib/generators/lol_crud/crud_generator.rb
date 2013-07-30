@@ -70,7 +70,7 @@ module LolCrud
     end
 
     def file_path
-      path = @settings[:plural]
+      path = @settings[:assigns_plural]
 
       return "#{@settings[:namespace]}/#{path}" if has_namespace?
 
