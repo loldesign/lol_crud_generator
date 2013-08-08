@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     lol_crud_generator (0.0.1)
-      rails (~> 3.2.13)
+      rails (~> 3.2)
 
 GEM
   remote: http://rubygems.org/
