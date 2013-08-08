@@ -1,4 +1,4 @@
-<h2><%= @settings[:model] %></h2>
+<h2><%%= <%=@settings[:model]%>.model_name.human %></h2>
 <% @settings[:model_fields].each do |field| %>
 <p>
   <strong><%%= <%=@settings[:model]%>.human_attribute_name(:<%=field%>)%></strong>
