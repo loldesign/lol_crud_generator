@@ -19,6 +19,15 @@ Create __CRUD__ structure for your __mongoid models__.
 * Now just access [http://localhost:3000/projects](http://localhost:3000/projects) and that's it :)
 
 
+##Create Resource instead Resources##
+---------------------------------------
+
+* Create your __CRUD_RESOURCE__ structure:
+
+`rails g lol_crud_generator:resource project`
+
+* Now just access [http://localhost:3000/projects/new](http://localhost:3000/projects/new) and that's it :)
+
 ##Using NameSpace##
 ---------------------------------------
 First of all you must create a namespace structure, in my case it will be created at /publisher/resources
