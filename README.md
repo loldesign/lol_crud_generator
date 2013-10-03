@@ -14,7 +14,7 @@ Create __CRUD__ structure for your __mongoid models__.
 
 * Create your __CRUD__ structure:
 
-`rails g lol_crud_generator:crud project`
+`rails g lol_crud_generator:resources project`
 
 * Now just access [http://localhost:3000/projects](http://localhost:3000/projects) and that's it :)
 
