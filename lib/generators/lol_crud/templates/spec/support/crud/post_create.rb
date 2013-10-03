@@ -32,7 +32,7 @@ shared_examples 'CRUD POST create' do |options|
       end
 
       it{ response.should redirect_to(need_redirect_to) }
-      it{ flash[:notice].should =~ /criado com sucesso./ }
+      it{ flash[:notice].should =~ /criad[o|a] com sucesso./ }
     end
 
     context "with valid persisted data" do
@@ -49,7 +49,7 @@ shared_examples 'CRUD POST create' do |options|
       end
 
       it { assigns[assigns_model_name].should  eq(resource) }
-      it { flash[:notice].should_not =~ /criado com sucesso./ }
+      it { flash[:notice].should_not =~ /criad[o|a] com sucesso./ }
     end
   end
 end

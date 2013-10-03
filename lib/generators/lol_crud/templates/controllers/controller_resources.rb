@@ -11,7 +11,7 @@ class <%=@settings[:controller]%>Controller < ApplicationController
 
   def create
     if @<%= @settings[:assigns] %>.save
-      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: "#{<%= @settings[:model] %>.model_name.human} criado com sucesso"
+      redirect_to <%= @settings[:path_prefix] %><%= @settings[:assigns] %>_path(@<%= @settings[:assigns] %>), notice: "#{<%= @settings[:model] %>.model_name.human} criado com sucesso."
     else
       render action: :new
     end

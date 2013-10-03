@@ -2,7 +2,7 @@
 
 <%%= simple_form_for(<%= @settings[:form_url] %>) do |f|%>
   <% @settings[:model_fields].each do |field| %>
-  <%%= f.input :<%= field %>%>
+  <%%= f.input :<%= field %>, placeholder: "#{f.object.class.human_attribute_name(:<%= field %>)}"%>
   <% end -%>
 
   <%%= f.button :submit %>

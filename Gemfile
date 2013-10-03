@@ -9,6 +9,7 @@ group :development, :test do
   gem "rspec-rails"       , ">= 2.12.2"
   gem "pry-rails"         , ">= 0.3.1"
   gem "mongoid"
+  gem "simple_form"
 end
 
 group :test do

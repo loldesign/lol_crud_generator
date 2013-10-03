@@ -11,10 +11,13 @@ shared_examples 'CRUD PUT update' do |options|
   before{ resource.stub(options[:parent_attr_name] || :user_id).and_return(current_user.id) if options[:has_parent] }
 
   describe "UPDATE" do
-    before{ model_klass.should_receive(:find).and_return(resource) }
+    before{ model_klass.stub(:find).and_return(resource) }
 
     context 'valid' do
-      before{ resource.should_receive(:update_attributes).and_return(true) }
+      before do
+        resource.stub(:update_attributes).and_return(true)
+        model_klass.any_instance.stub(:update_attributes).and_return(true)
+      end
 
       it "should update valid" do
         put :update, assigns_model_name => attributes_for(assigns_model_name), id: resource.to_param
@@ -22,7 +25,10 @@ shared_examples 'CRUD PUT update' do |options|
       end
     end
     context 'invalid' do
-      before{ resource.should_receive(:update_attributes).and_return(false) }
+      before do
+        resource.stub(:update_attributes).and_return(false)
+        model_klass.any_instance.stub(:update_attributes).and_return(false)
+      end
 
       it "should not update" do
         put :update, assigns_model_name => attributes_for(assigns_model_name), id: resource.to_param

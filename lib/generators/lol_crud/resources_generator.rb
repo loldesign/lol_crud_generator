@@ -1,5 +1,5 @@
 module LolCrud
-  class CrudGenerator < Rails::Generators::Base
+  class ResourcesGenerator < Rails::Generators::Base
     source_root File.expand_path('../templates', __FILE__)
 
     argument :resource_name, :required => true, :default => nil
@@ -19,7 +19,7 @@ module LolCrud
     def create_controller
       @settings = resource_options
 
-      template "controllers/controller.rb", "app/controllers/#{file_path()}_controller.rb"
+      template "controllers/controller_resources.rb", "app/controllers/#{file_path()}_controller.rb"
     end
 
     def create_views
