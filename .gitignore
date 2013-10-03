@@ -69,3 +69,4 @@ log/development.log
 spec/dummy/log/development.log
 
 spec/dummy/log/development.log
+spec/dummy/app/*
